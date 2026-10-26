@@ -1,0 +1,176 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+background-image: linear-gradient(blue,purple);
+}
+.wrapper{
+    width: 420px;
+    background: rgba(255, 255, 255, 0.198);
+
+    backdrop-filter: blur(8px);
+    border-radius: 7px;
+    padding: 28px 38px 45px;
+
+
+
+}
+.wrapper header{
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+
+}
+.wrapper .search{
+    position: relative;
+    margin: 35px 0 8px; 
+
+}
+.search input{
+    height: 42px;
+    width: 100%;
+    outline: none;
+    border: 1px solid  gray;
+    border-radius: 6px;
+    padding: 0 42px;
+    font-size: 17px;
+}
+.search :where(i, span){
+    position: absolute;
+    top: 50%;
+    color: #999;
+    font-size: 16px;
+    transform: translateY(-50%);
+
+}
+.search i{
+    left: 18px;
+    font-size: 16px;
+    pointer-events: none;
+
+}
+.search span{
+    right:15px;
+    font-size:18px;
+
+    cursor: pointer;
+
+}
+
+.search input:valid ~ span{
+    display: block;
+}
+
+.wrapper .info-text{
+    font-size: 14px;
+    color: gray;
+
+}
+
+.wrapper .active .info-text{
+    display: none;
+
+}
+
+.info-text span{
+    font-weight: 500;
+
+}
+
+.wrapper ul li{
+    display: flex;
+    padding-bottom:17px ;
+    align-items: center;
+    margin-bottom: 14px;
+    border-bottom:1px solid #000 ;
+    justify-content: space-between;
+
+
+}
+.wrapper ul{
+    display:none;
+}
+.active ul{
+    display: block;
+
+}
+ul .word p {
+    font-size: 22px;
+    font-weight: 600;
+
+}
+ul .word span {
+    font-size: 22px;
+    color: #999;
+    
+
+}
+ul .word i{
+    cursor:pointer ;
+    font-size: 15px;
+    column-rule: #999;
+}
+.word i {
+  color: #6c63ff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.word i:hover {
+  background: #ece9ff;
+  transform: scale(1.15);
+}
+
+.word i:active {
+  transform: scale(0.95);
+}
+
+.word i.playing {
+  color: #fff;
+  background: #6c63ff;
+  animation: pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+ .details{
+    padding-left: 10px;
+    border-radius: 4px 0 0 4px;
+    border-left:3px solid blue;
+
+}
+ .details p{
+    font-size: 17px;
+    font-weight: 500;
+
+
+}
+.content li .details span{
+    font-size: 17px;
+    color: gray;
+}
+.synonyms .details .list{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.synonyms .details .list span{
+    cursor: pointer;
+
+    margin-right: 5px; text-decoration: underline;
+
+
+}
